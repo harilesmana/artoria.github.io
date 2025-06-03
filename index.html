@@ -1,64 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Header Footer Container</title>
-<style>
-  /* Reset dasar */
-  * {
-    box-sizing: border-box;
-  }
-
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f0f0f0;
-  }
-
-  /* Header */
-  header {
-    background-color: #007bff;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-
-  /* Container utama */
-  .container {
-    max-width: 960px;
-    margin: 20px auto; /* center dan beri margin atas bawah */
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-
-  /* Footer */
-  footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NightFang Guild - RPG Legends</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-950 text-white font-sans">
 
-<header>
-  <h1>Ini Header</h1>
-</header>
+  <!-- Hero / Banner -->
+  <section class="h-screen bg-cover bg-center flex items-center justify-center" style="background-image: url('https://via.placeholder.com/1600x900?text=Guild+Banner');">
+    <div class="bg-black bg-opacity-60 p-10 rounded-xl text-center">
+      <h1 class="text-6xl font-bold text-yellow-400 mb-4">NightFang</h1>
+      <p class="text-xl mb-6">An elite guild from RPG Legends — forged by battle, bonded by loyalty.</p>
+      <a href="#join" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-full">Join Us</a>
+    </div>
+  </section>
 
-<div class="container">
-  <p>Ini isi konten utama di dalam container.</p>
-  <p>Bisa ditambah paragraf, gambar, atau elemen lain.</p>
-</div>
+  <!-- About / Lore -->
+  <section class="py-16 px-6 bg-gray-900 text-center">
+    <h2 class="text-4xl font-bold mb-4">About the Guild</h2>
+    <p class="max-w-3xl mx-auto text-gray-300">NightFang was born during the Siege of Eldara. We stand as guardians of the weak and seekers of glory. PvE, PvP, Raids — we do it all. With 50+ active members, we’re one of the top guilds in the realm.</p>
+  </section>
 
-<footer>
-  <p>© 2025 Hak Cipta Dilindungi</p>
-</footer>
+  <!-- Officers / Members -->
+  <section class="py-16 px-6 bg-gray-800">
+    <h2 class="text-3xl font-bold text-center mb-8">Core Members</h2>
+    <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto text-center">
+      <div class="bg-gray-700 p-6 rounded-xl">
+        <img src="https://via.placeholder.com/120" class="mx-auto rounded-full mb-4" alt="Leader">
+        <h3 class="text-xl font-bold">Drakos</h3>
+        <p class="text-yellow-400">Guild Leader</p>
+      </div>
+      <div class="bg-gray-700 p-6 rounded-xl">
+        <img src="https://via.placeholder.com/120" class="mx-auto rounded-full mb-4" alt="Officer">
+        <h3 class="text-xl font-bold">Lyria</h3>
+        <p class="text-yellow-400">PvE Officer</p>
+      </div>
+      <div class="bg-gray-700 p-6 rounded-xl">
+        <img src="https://via.placeholder.com/120" class="mx-auto rounded-full mb-4" alt="Officer">
+        <h3 class="text-xl font-bold">Kael</h3>
+        <p class="text-yellow-400">PvP Strategist</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements / Gallery -->
+  <section class="py-16 px-6 bg-gray-900">
+    <h2 class="text-3xl font-bold text-center mb-8">Guild Highlights</h2>
+    <div class="grid md:grid-cols-3 gap-4 max-w-6xl mx-auto">
+      <img src="https://via.placeholder.com/400x250" class="rounded-xl shadow-lg" alt="Raid 1">
+      <img src="https://via.placeholder.com/400x250" class="rounded-xl shadow-lg" alt="Raid 2">
+      <img src="https://via.placeholder.com/400x250" class="rounded-xl shadow-lg" alt="PvP Tournament">
+    </div>
+  </section>
+
+  <!-- Join Us Section -->
+  <section id="join" class="py-16 px-6 bg-yellow-500 text-black text-center">
+    <h2 class="text-3xl font-bold mb-4">Want to Join NightFang?</h2>
+    <p class="mb-6">We’re always looking for active, skilled, and fun members. Discord is required. Apply now and be part of our legacy.</p>
+    <a href="https://discord.gg/yourguild" target="_blank" class="bg-black hover:bg-gray-800 text-white font-bold py-3 px-6 rounded-full">Join Discord</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 bg-gray-950 text-center text-gray-400">
+    <p>&copy; 2025 NightFang Guild. All rights reserved.</p>
+    <div class="mt-4 space-x-4">
+      <a href="#" class="hover:text-white">Facebook</a>
+      <a href="#" class="hover:text-white">YouTube</a>
+      <a href="#" class="hover:text-white">Guild Ranking</a>
+    </div>
+  </footer>
 
 </body>
 </html>
