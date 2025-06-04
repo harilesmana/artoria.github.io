@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guild Game - Futuristic UI</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <div class="header">
+    <span class="open-btn" onclick="toggleSidebar()" aria-label="Toggle Sidebar" role="button">☰</span>
+    <h2>ARTORIA</h2>
+  </div>
+
+  <div id="sidebar" class="sidebar">
+    <a href="index.html"><span class="icon"><i class="fas fa-home"></i></span>Home</a>
+    <a href="admin.html"><span class="icon"><i class="fas fa-user-shield"></i></span>Admin</a>
+    <a href="event.html"><span class="icon"><i class="fas fa-calendar-alt"></i></span>Events</a>
+    <a href="tool.html"><span class="icon"><i class="fas fa-cogs"></i></span>Tools</a>
+  </div>
+
+  <div id="overlay" onclick="toggleSidebar()"></div>
+
+  <div class="main-content">
+    <form autocomplete="off">
+      <label for="level">Current Level:</label>
+      <input type="number" id="level" min="1" max="265" value="1" />
+
+      <label for="level-percentage">Current Level Percentage (0-99):</label>
+      <input type="number" id="level-percentage" min="0" max="99" value="0" />
+
+      <label for="target-level">Target Level:</label>
+      <input type="number" id="target-level" min="1" max="265" value="265" />
+
+      <fieldset class="ui-group quest-group">
+        <legend>Quest XP</legend>
+
+        <label for="quest-name">Quest/Monster:</label>
+        <select id="quest-name" title="Select quest or monster"></select>
+
+        <label for="quest-exp">Experience per completion:</label>
+        <input type="number" id="quest-exp" value="0" min="0" />
+
+        <label for="quest-times">Number of times to do quest/monster:</label>
+        <input type="number" id="quest-times" value="0" min="0" />
+
+        <button type="button" id="quest-popup">Info on Custom Experience</button>
+
+        <p>XP Required: <span id="xp-required">0</span></p>
+        <p>Times to reach target level: <span id="target-times">0</span></p>
+        <p>Level after times: <span id="times-level">0 (0%)</span></p>
+      </fieldset>
+
+      <fieldset class="ui-group mq-group" style="display:none;">
+        <legend>Main Quests</legend>
+
+        <label for="mq-from">From:</label>
+        <select id="mq-from"></select>
+
+        <label for="mq-until">Until:</label>
+        <select id="mq-until"></select>
+
+        <label>
+          <input type="checkbox" id="skip-venena" /> Skip Venena (add +12.5M XP)
+        </label>
+        <label>
+          <input type="checkbox" id="multiple-mq" /> Calculate multiple runs
+        </label>
+
+        <p id="mq-xp"><strong>XP</strong>: 0</p>
+        <p id="mq-eval"></p>
+        <p id="mq-stopAt"></p>
+        <p id="mq-startFrom"></p>
+
+        <div id="mq-or">or</div>
+
+        <div id="mq-table" style="display:none;">
+          <div id="mq-table-header"></div>
+          <div id="mq-table-results"></div>
+        </div>
+      </fieldset>
+
+      <fieldset class="ui-group ui-select-group" style="margin-top:1rem;">
+        <legend>Choose Calculation Mode</legend>
+        <label><input type="radio" name="ui-select" id="quest-select" checked /> Quest XP</label>
+        <label><input type="radio" name="ui-select" id="mq-select" /> Main Quests</label>
+      </fieldset>
+    </form>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+      sidebar.classList.toggle('show');
+      document.body.classList.toggle('sidebar-open');
+      overlay.style.display = sidebar.classList.contains('show') ? 'block' : 'none';
+    }
+  </script>
+
+  <!-- Helper scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    const LV_CAP = 265;
+
+    function floor(x) { return Math.floor(x); }
+    function ceil(x) { return Math.ceil(x); }
+    function parseInput(selector, fallback = 1) {
+      let val = parseFloat($(selector).val());
+      return isNaN(val) ? fallback : val;
+    }
+    function fillOptions(values, labels) {
+      return values.map((v, i) => `<option value="${v}">${labels[i]}</option>`).join('');
+    }
+  </script>
+
+  <!-- Script utama -->
+  <script src="assets/js/xp.js"></script>
+</body>
+</html>

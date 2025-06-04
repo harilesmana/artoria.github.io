@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guild Game - Futuristic UI</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+
+ <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <div class="header">
+    <span class="open-btn" onclick="toggleSidebar()" aria-label="Toggle Sidebar" role="button">☰</span>
+    <h2>ARTORIA</h2>
+  </div>
+
+  <div id="sidebar" class="sidebar">
+      <a href="index.html"><span class="icon"><i class="fas fa-home"></i></span>Home</a>
+    <a href="admin.html"><span class="icon"><i class="fas fa-user-shield"></i></span>Admin</a>
+    <a href="event.html"><span class="icon"><i class="fas fa-calendar-alt"></i></span>Events</a>
+    <a href="tool.html"><span class="icon"><i class="fas fa-cogs"></i></span>Tools</a>
+  </div>
+
+  <div id="overlay" onclick="toggleSidebar()"></div>
+
+  <div class="main-content">
+   <h1>Ailment Resistance Calculator</h1>
+  <div class="container">
+    <div class="input-group">
+      <label for="mtl">Base MTL Stat (bukan persen):</label>
+      <input type="number" id="mtl" placeholder="Contoh: 250" />
+    </div>
+    <div class="input-group">
+      <label for="weapon">Weapon Bonus (%):</label>
+      <input type="number" id="weapon" placeholder="Contoh: 5" />
+    </div>
+    <div class="input-group">
+      <label for="sub">Sub-Weapon Bonus (%):</label>
+      <input type="number" id="sub" placeholder="Contoh: 2" />
+    </div>
+    <div class="input-group">
+      <label for="arm">Armor Bonus (%):</label>
+      <input type="number" id="arm" placeholder="Contoh: 3" />
+    </div>
+    <div class="input-group">
+      <label for="add">Add Gear Bonus (%):</label>
+      <input type="number" id="add" placeholder="Contoh: 4" />
+    </div>
+    <div class="input-group">
+      <label for="ring">Ring Bonus (%):</label>
+      <input type="number" id="ring" placeholder="Contoh: 1" />
+    </div>
+    <button onclick="calculateAilRes()">Hitung Ailment Resistance</button>
+    <div class="result" id="result">Hasil akan muncul di sini.</div>
+  </div>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+      sidebar.classList.toggle('show');
+      document.body.classList.toggle('sidebar-open');
+      overlay.style.display = sidebar.classList.contains('show') ? 'block' : 'none';
+    }
+  </script>
+<script>
+  function calculateAilRes() {
+    const mtl = parseFloat(document.getElementById("mtl").value) || 0;
+    const weapon = parseFloat(document.getElementById("weapon").value) || 0;
+    const sub = parseFloat(document.getElementById("sub").value) || 0;
+    const arm = parseFloat(document.getElementById("arm").value) || 0;
+    const add = parseFloat(document.getElementById("add").value) || 0;
+    const ring = parseFloat(document.getElementById("ring").value) || 0;
+
+    const baseAilRes = (mtl / 255) * 75;
+    const totalBonus = weapon + sub + arm + add + ring;
+    const finalAilRes = Math.floor(baseAilRes + totalBonus);
+
+    document.getElementById("result").textContent =
+      "Total Ailment Resistance: " + finalAilRes + "%";
+  }
+</script>
+</body>
+</html>

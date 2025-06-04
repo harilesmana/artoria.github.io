@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+   
+
+    <title>Toram Tools - Ninja Scroll Database</title>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Toram Online, Ninja Scroll, Combinations, List, Simulator, Database, Crafting" />
+    <meta name="description" content="Ninja Scroll Database by Insane23." />
+    
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <div class="header">
+        <span class="open-btn" onclick="toggleSidebar()" aria-label="Toggle Sidebar" role="button">☰</span>
+        <h2>ARTORIA</h2>
+    </div>
+
+    <div id="sidebar" class="sidebar">
+       <a href="index.html"><span class="icon"><i class="fas fa-home"></i></span>Home</a>
+    <a href="admin.html"><span class="icon"><i class="fas fa-user-shield"></i></span>Admin</a>
+    <a href="event.html"><span class="icon"><i class="fas fa-calendar-alt"></i></span>Events</a>
+    <a href="tool.html"><span class="icon"><i class="fas fa-cogs"></i></span>Tools</a>
+    </div>
+
+    <div id="overlay" onclick="toggleSidebar()"></div>
+
+    <div class="main-content">
+        <h1>Welcome to Toram Tools</h1>
+     
+        <div class="scroll-container">
+            <fieldset class="section" id="scroll-skills-container">
+                <legend>
+                    <div>
+                        <span>Search by Scroll Skills</span>
+                        <img id="sss-popup">
+                    </div>
+                </legend>
+                <div class="scroll-section" id="scroll-skills">
+                    <label>Skill 1<select id="scroll-skill-1" data-prev="-1"></select></label>
+                    <label>Skill 2<select id="scroll-skill-2" data-prev="-1"></select></label>
+                    <label>Skill 3<select id="scroll-skill-3" data-prev="-1"></select></label>
+                    <div class="button-group">
+                        <button id="scroll-search">Search</button>
+                        <button id="scroll-search-reset">Reset</button>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="section" style="height: 100%;">
+                <legend>
+                    <div>
+                        <span>Craft a Scroll</span>
+                        <img id="cs-popup">
+                    </div>
+                </legend>
+                <form action="javascript: void(0);" class="scroll-section" id="scroll-craft-components">
+                    <label>Weapon 1<select required id="scroll-component-1" data-prev="-1"></select></label>
+                    <label>Weapon 2<select required id="scroll-component-2" data-prev="-1"></select></label>
+                    <label>Weapon 3<select required id="scroll-component-3" data-prev="-1"></select></label>
+                    <div>
+                        <button id="craft-scroll">Craft</button>
+                        <button type="button" id="craft-scroll-reset">Reset</button>
+                    </div>
+            <div id="craft-results-container" class="hidden">
+    <div id="craft-results">
+        <div class="result-block">
+            <span class="block-header">Possible Types</span>
+            <div class="result-content">
+                <span class="scroll-type" id="craft-results-type"></span> Ninjutsu Scroll
+            </div>
+        </div>
+        <div class="result-block">
+            <span class="block-header">Skills</span>
+            <div class="result-content" id="craft-results-skills"></div>
+        </div>
+    </div>
+</div>
+                </form>
+            </fieldset>
+        </div>
+
+        <div class="results-parent">
+            <fieldset class="section">
+                <legend>
+                    <div>
+                        <span>Results</span>
+                        <img id="results-popup">
+                    </div>
+                </legend>
+                <div class="results-container">
+                    <div id="results"></div>
+                    <div id="results-warning">Oops, it seems that this combination isn't possible unless one of the
+                        skills is random ("Any" or "Random" options). Try another combination, leaving one of the fields
+                        as random.</div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        "use strict"
+
+        const fillOptions = function (values, keys=null, selected=false) {
+            if (values.length == 0) {
+                return;
+            }
+
+            let s = "";
+            if (keys != null) {
+                s += `<option value="${values[0]}"${selected ? " selected" : ""}>${keys[0]}</option>\n`;
+                for (var i = 1; i < values.length; i++) {
+                    s += `<option value="${values[i]}">${keys[i]}</option>\n`;
+                }
+            }
+            else {
+                s += `<option value="${values[i]}"${selected ? " selected" : ""}>${values[i]}</option>\n`;
+                for (var i = 1; i < values.length; i++) {
+                    s += `<option value="${values[i]}">${values[i]}</option>\n`;
+                }
+            }
+            return s;
+        }
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            sidebar.classList.toggle('show');
+            document.body.classList.toggle('sidebar-open');
+            overlay.style.display = sidebar.classList.contains('show') ? 'block' : 'none';
+        }
+        
+    </script>
+    <script src="assets/js/scroll.js"></script>
+</body>
+</html>

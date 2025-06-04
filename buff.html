@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guild Game - Futuristic UI</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+
+ <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <div class="header">
+    <span class="open-btn" onclick="toggleSidebar()" aria-label="Toggle Sidebar" role="button">☰</span>
+    <h2>ARTORIA</h2>
+  </div>
+
+  <div id="sidebar" class="sidebar">
+      <a href="index.html"><span class="icon"><i class="fas fa-home"></i></span>Home</a>
+    <a href="admin.html"><span class="icon"><i class="fas fa-user-shield"></i></span>Admin</a>
+    <a href="event.html"><span class="icon"><i class="fas fa-calendar-alt"></i></span>Events</a>
+    <a href="tool.html"><span class="icon"><i class="fas fa-cogs"></i></span>Tools</a>
+  </div>
+
+  <div id="overlay" onclick="toggleSidebar()"></div>
+
+  <div class="main-content">
+  	  <div class="container">
+    <h1><i class="fas fa-scroll"></i> Toram Online Buff List</h1>
+    
+    <div class="buff-grid">
+      <!-- MAX HP -->
+      <div class="buff-category">
+        <div class="buff-header">
+          <i class="fas fa-heart"></i> MAX HP
+        </div>
+        <div class="buff-content">
+          <div class="buff-item">
+            <span class="buff-code">1010032</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1010084</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1011945</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1234567</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">3011143</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">7121252</span>
+            <span class="buff-level">LVL 9</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-address">Sofya-A-420</span>
+            <span class="buff-level">LVL 9</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- MAX MP -->
+      <div class="buff-category">
+        <div class="buff-header">
+          <i class="fas fa-tint"></i> MAX MP
+        </div>
+        <div class="buff-content">
+          <div class="buff-item">
+            <span class="buff-code">3204544</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">6010021</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">6070013</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1011212</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1016646</span>
+            <span class="buff-level">LVL 10 <span class="special-effect">int</span></span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">4011793</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1010013</span>
+            <span class="buff-level">LVL 10 <span class="special-effect">int, ampr</span></span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">4011793</span>
+            <span class="buff-level">LVL 10 <span class="special-effect">crt</span></span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1011212</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- AMPR -->
+      <div class="buff-category">
+        <div class="buff-header">
+          <i class="fas fa-bolt"></i> AMPR
+        </div>
+        <div class="buff-content">
+          <div class="buff-item">
+            <span class="buff-code">4242526</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1010017</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1011010</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">3063101</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1010006</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1011010</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1023040</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">3062728</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1010017</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1010092</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">5240001</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1010050</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1019696</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">3226325</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">5010103</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">2011111</span>
+            <span class="buff-level">LVL 8</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- CRITICAL RATE -->
+      <div class="buff-category">
+        <div class="buff-header">
+          <i class="fas fa-crosshairs"></i> CRITICAL RATE
+        </div>
+        <div class="buff-content">
+          <div class="buff-item">
+            <span class="buff-code">7162029</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1100000</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1069927</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1012000</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">3061206</span>
+            <span class="buff-level">LVL 9</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">3246969</span>
+            <span class="buff-level">LVL 9</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">7190311</span>
+            <span class="buff-level">LVL 9</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1010011</span>
+            <span class="buff-level">LVL 9</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- WEAPON ATK -->
+      <div class="buff-category">
+        <div class="buff-header">
+          <i class="fas fa-sword"></i> WEAPON ATK
+        </div>
+        <div class="buff-content">
+          <div class="buff-item">
+            <span class="buff-code">1010029</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1010099</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">6010024</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1011126</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">2020404</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">2010136</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">3070028</span>
+            <span class="buff-level">LVL 9</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">7162029</span>
+            <span class="buff-level">LVL 9</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- STR -->
+      <div class="buff-category">
+        <div class="buff-header">
+          <i class="fas fa-dumbbell"></i> STR
+        </div>
+        <div class="buff-content">
+          <div class="buff-item">
+            <span class="buff-code">1110033</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1011069</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">7031997</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">7070777</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">4016699</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-address">Elscaro-A-1</span>
+            <span class="buff-level">LVL 9</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- DEX -->
+      <div class="buff-category">
+        <div class="buff-header">
+          <i class="fas fa-bullseye"></i> DEX
+        </div>
+        <div class="buff-content">
+          <div class="buff-item">
+            <span class="buff-code">5010092</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1010106</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">7011001</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">2020222</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1010058</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">4204200</span>
+            <span class="buff-level">LVL 8</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">3011143</span>
+            <span class="buff-level">LVL 8</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- INT -->
+      <div class="buff-category">
+        <div class="buff-header">
+          <i class="fas fa-brain"></i> INT
+        </div>
+        <div class="buff-content">
+          <div class="buff-item">
+            <span class="buff-code">2020707</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1032222</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">6061294</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1010489</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">6010701</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-address">Elscaro-z-1234</span>
+            <span class="buff-level">LVL 8</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- AGI -->
+      <div class="buff-category">
+        <div class="buff-header">
+          <i class="fas fa-running"></i> AGI
+        </div>
+        <div class="buff-content">
+          <div class="buff-item">
+            <span class="buff-code">7162029</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">4010228</span>
+            <span class="buff-level">LVL 8</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- ACCURACY -->
+      <div class="buff-category">
+        <div class="buff-header">
+          <i class="fas fa-bullseye"></i> ACCURACY
+        </div>
+        <div class="buff-content">
+          <div class="buff-item">
+            <span class="buff-code">4261111</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1010013</span>
+            <span class="buff-level">LVL 9</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- MAGICAL RESIST -->
+      <div class="buff-category">
+        <div class="buff-header">
+          <i class="fas fa-shield-virus"></i> MAGICAL RESIST
+        </div>
+        <div class="buff-content">
+          <div class="buff-item">
+            <span class="buff-code">1010004</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">4080087</span>
+            <span class="buff-level">LVL 9</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">7227777</span>
+            <span class="buff-level">LVL 9</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- PHYSICAL RESIST -->
+      <div class="buff-category">
+        <div class="buff-header">
+          <i class="fas fa-shield-alt"></i> PHYSICAL RESIST
+        </div>
+        <div class="buff-content">
+          <div class="buff-item">
+            <span class="buff-code">1020001</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1100000</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1018989</span>
+            <span class="buff-level">LVL 9</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1100000</span>
+            <span class="buff-level">LVL 9</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- FRACTIONAL BARRIER -->
+      <div class="buff-category">
+        <div class="buff-header">
+          <i class="fas fa-shield-virus"></i> FRACTIONAL BARRIER
+        </div>
+        <div class="buff-content">
+          <div class="buff-item">
+            <span class="buff-code">1222002</span>
+            <span class="buff-level">LVL 8</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">6181999</span>
+            <span class="buff-level">LVL 8</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- +AGGRO% -->
+      <div class="buff-category">
+        <div class="buff-header">
+          <i class="fas fa-plus-circle"></i> +AGGRO%
+        </div>
+        <div class="buff-content">
+          <div class="buff-item">
+            <span class="buff-code">3030110</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1264321</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">6262000</span>
+            <span class="buff-level">LVL 9</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1190069</span>
+            <span class="buff-level">LVL 9</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1016646</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1014230</span>
+            <span class="buff-level">LVL 9</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1013000</span>
+            <span class="buff-level">LVL 9</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-address">Sofya-A-4510</span>
+            <span class="buff-level">LVL 9</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- -AGGRO% -->
+      <div class="buff-category">
+        <div class="buff-header">
+          <i class="fas fa-minus-circle"></i> -AGGRO%
+        </div>
+        <div class="buff-content">
+          <div class="buff-item">
+            <span class="buff-code">1010038</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-address">Sofya-A-2</span>
+            <span class="buff-level">LVL 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">3061206</span>
+            <span class="buff-level">LVL 8</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- DTE EARTH -->
+      <div class="buff-category">
+        <div class="buff-header">
+          <i class="fas fa-mountain"></i> DTE EARTH
+        </div>
+        <div class="buff-content">
+          <div class="buff-item">
+            <span class="buff-code">3210103</span>
+            <span class="buff-level">LVL 9</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">2022222</span>
+            <span class="buff-level">LVL 8</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">2020202</span>
+            <span class="buff-level">LVL 8</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">4083005</span>
+            <span class="buff-level">LVL 8</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">2099876</span>
+            <span class="buff-level">LVL 7</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1010174</span>
+            <span class="buff-level">LVL 7</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">5240001</span>
+            <span class="buff-level">LVL 7</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">3011143</span>
+            <span class="buff-level">LVL 7</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1016646</span>
+            <span class="buff-level">LVL 7</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1010002</span>
+            <span class="buff-level">LVL 6</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- DTE WIND -->
+      <div class="buff-category">
+        <div class="buff-header">
+          <i class="fas fa-wind"></i> DTE WIND
+        </div>
+        <div class="buff-content">
+          <div class="buff-item">
+            <span class="buff-code">3210101</span>
+            <span class="buff-level">LVL 9</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">3030303</span>
+            <span class="buff-level">LVL 8</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1010055</span>
+            <span class="buff-level">LVL 7</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">4099876</span>
+            <span class="buff-level">LVL 7</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1010055</span>
+            <span class="buff-level">LVL 7</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- DTE WATER -->
+      <div class="buff-category">
+        <div class="buff-header">
+          <i class="fas fa-tint"></i> DTE WATER
+        </div>
+        <div class="buff-content">
+          <div class="buff-item">
+            <span class="buff-code">3210100</span>
+            <span class="buff-level">LVL 9</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">7150030</span>
+            <span class="buff-level">LVL 9</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">3062111</span>
+            <span class="buff-level">LVL 8</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">7011001</span>
+            <span class="buff-level">LVL 8</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1110007</span>
+            <span class="buff-level">LVL 7</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">3226325</span>
+            <span class="buff-level">LVL 6</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- DTE FIRE -->
+      <div class="buff-category">
+        <div class="buff-header">
+          <i class="fas fa-fire"></i> DTE FIRE
+        </div>
+        <div class="buff-content">
+          <div class="buff-item">
+            <span class="buff-code">3210106</span>
+            <span class="buff-level">LVL 9</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">7011001</span>
+            <span class="buff-level">LVL 8</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1010799</span>
+            <span class="buff-level">LVL 7</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1012610</span>
+            <span class="buff-level">LVL 5</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- DTE LIGHT -->
+      <div class="buff-category">
+        <div class="buff-header">
+          <i class="fas fa-sun"></i> DTE LIGHT
+        </div>
+        <div class="buff-content">
+          <div class="buff-item">
+            <span class="buff-code">3210105</span>
+            <span class="buff-level">LVL 9</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1020345</span>
+            <span class="buff-level">LVL 9</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">4046666</span>
+            <span class="buff-level">LVL 8</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">4016699</span>
+            <span class="buff-level">LVL 6</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- DTE DARK -->
+      <div class="buff-category">
+        <div class="buff-header">
+          <i class="fas fa-moon"></i> DTE DARK
+        </div>
+        <div class="buff-content">
+          <div class="buff-item">
+            <span class="buff-code">3210104</span>
+            <span class="buff-level">LVL 9</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">5010092</span>
+            <span class="buff-level">LVL 9</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">6010003</span>
+            <span class="buff-level">LVL 8</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1010006</span>
+            <span class="buff-level">LVL 7</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1016646</span>
+            <span class="buff-level">LVL 7</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1091111</span>
+            <span class="buff-level">LVL 7</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">3030069</span>
+            <span class="buff-level">LVL 7</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- DTE NEUTRAL -->
+      <div class="buff-category">
+        <div class="buff-header">
+          <i class="fas fa-circle"></i> DTE NEUTRAL
+        </div>
+        <div class="buff-content">
+          <div class="buff-item">
+            <span class="buff-code">3210102</span>
+            <span class="buff-level">LVL 9</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">3099876</span>
+            <span class="buff-level">LVL 7</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1011902</span>
+            <span class="buff-level">LVL 7</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">6061294</span>
+            <span class="buff-level">LVL 7</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1019696</span>
+            <span class="buff-level">LVL 6</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-code">1032727</span>
+            <span class="buff-level">LVL 5</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Drop Rate -->
+      <div class="buff-category">
+        <div class="buff-header">
+          <i class="fas fa-gift"></i> Drop Rate
+        </div>
+        <div class="buff-content">
+          <div class="buff-item">
+            <span class="buff-code">4196969</span>
+            <span class="buff-level">LVL 6</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Address Buffs -->
+      <div class="buff-category">
+        <div class="buff-header">
+          <i class="fas fa-map-marker-alt"></i> Address Buffs
+        </div>
+        <div class="buff-content">
+          <div class="buff-item">
+            <span class="buff-address">1010203</span>
+            <span class="buff-level">HP Lv 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-address">6010062</span>
+            <span class="buff-level">HP Lv 10 + Frac Barrier Lv 8</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-address">1020808</span>
+            <span class="buff-level">MP Lv 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-address">1200001</span>
+            <span class="buff-level">MP Lv 10 + DEX Lv 9</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-address">2010068</span>
+            <span class="buff-level">AMPR Lv 10</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-address">5010031</span>
+            <span class="buff-level">AMPR Lv 10 + DEX Lv 9</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-address">1010433</span>
+            <span class="buff-level">CR Lv 10 + DTE Light</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-address">1010810</span>
+            <span class="buff-level">WATK Lv 10 + DTE Water Lv 4</span>
+          </div>
+          <div class="buff-item">
+            <span class="buff-address">4084545</span>
+            <span class="buff-level">DEX Lv 10 + DTE Fire Lv 5</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  	
+  	</div>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+      sidebar.classList.toggle('show');
+      document.body.classList.toggle('sidebar-open');
+      overlay.style.display = sidebar.classList.contains('show') ? 'block' : 'none';
+    }
+  </script>
+
+</body>
+</html>

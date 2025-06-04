@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guild Artoria - Events</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <div class="header">
+    <span class="open-btn" onclick="toggleSidebar()">☰</span>
+    <h2>ARTORIA</h2>
+  </div>
+
+  <div id="sidebar" class="sidebar">
+    <a href="index.html"><span class="icon"><i class="fas fa-home"></i></span>Home</a>
+    <a href="admin.html"><span class="icon"><i class="fas fa-user-shield"></i></span>Admin</a>
+    <a href="event.html"><span class="icon"><i class="fas fa-calendar-alt"></i></span>Events</a>
+    <a href="tool.html"><span class="icon"><i class="fas fa-cogs"></i></span>Tools</a>
+  </div>
+
+  <div id="overlay" onclick="toggleSidebar()"></div>
+
+  <div class="main-content">
+    <h1>Guild Raid Events</h1>
+    <div class="carousel">
+      <div class="slides" id="carouselSlides">
+        <div class="slide" style="background-image: url('https://via.placeholder.com/900x400/330066/ffffff?text=Zauga+Raid');">
+          <div class="slide-content">
+            <h3>Raid: Dark Dragon Zauga</h3>
+            <p>Serangan besar dimulai Jumat malam 21:00 WIB. Siapkan tim dan strategi!</p>
+          </div>
+        </div>
+        <div class="slide" style="background-image: url('https://via.placeholder.com/900x400/550077/ffffff?text=Phantom+Raid');">
+          <div class="slide-content">
+            <h3>Raid: Phantom of Abyss</h3>
+            <p>Event kolaborasi spesial selama 3 hari! Hadiah eksklusif menanti.</p>
+          </div>
+        </div>
+        <div class="slide" style="background-image: url('https://via.placeholder.com/900x400/440044/ffffff?text=War+of+Realms');">
+          <div class="slide-content">
+            <h3>War of Realms</h3>
+            <p>Sabtu 19:00 WIB. Perang antar guild untuk menguasai dunia!</p>
+          </div>
+        </div>
+      </div>
+      <div class="nav-buttons">
+        <span onclick="prevSlide()">&#10094;</span>
+        <span onclick="nextSlide()">&#10095;</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+      sidebar.classList.toggle('show');
+      overlay.style.display = sidebar.classList.contains('show') ? 'block' : 'none';
+    }
+
+    let currentSlide = 0;
+    const slides = document.getElementById("carouselSlides");
+    const totalSlides = slides.children.length;
+
+    function updateSlide() {
+      slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateSlide();
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateSlide();
+    }
+
+    setInterval(nextSlide, 6000);
+  </script>
+
+</body>
+</html>

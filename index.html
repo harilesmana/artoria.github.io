@@ -1,76 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NightFang Guild - RPG Legends</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guild Game - Futuristic UI</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+
+ <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body class="bg-gray-950 text-white font-sans">
+<body>
 
-  <!-- Hero / Banner -->
-  <section class="h-screen bg-cover bg-center flex items-center justify-center" style="background-image: url('https://via.placeholder.com/1600x900?text=Guild+Banner');">
-    <div class="bg-black bg-opacity-60 p-10 rounded-xl text-center">
-      <h1 class="text-6xl font-bold text-yellow-400 mb-4">NightFang</h1>
-      <p class="text-xl mb-6">An elite guild from RPG Legends — forged by battle, bonded by loyalty.</p>
-      <a href="#join" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-full">Join Us</a>
-    </div>
-  </section>
+  <div class="header">
+    <span class="open-btn" onclick="toggleSidebar()" aria-label="Toggle Sidebar" role="button">☰</span>
+    <h2>ARTORIA</h2>
+  </div>
 
-  <!-- About / Lore -->
-  <section class="py-16 px-6 bg-gray-900 text-center">
-    <h2 class="text-4xl font-bold mb-4">About the Guild</h2>
-    <p class="max-w-3xl mx-auto text-gray-300">NightFang was born during the Siege of Eldara. We stand as guardians of the weak and seekers of glory. PvE, PvP, Raids — we do it all. With 50+ active members, we’re one of the top guilds in the realm.</p>
-  </section>
+  <div id="sidebar" class="sidebar">
+      <a href="index.html"><span class="icon"><i class="fas fa-home"></i></span>Home</a>
+    <a href="admin.html"><span class="icon"><i class="fas fa-user-shield"></i></span>Admin</a>
+    <a href="event.html"><span class="icon"><i class="fas fa-calendar-alt"></i></span>Events</a>
+    <a href="tool.html"><span class="icon"><i class="fas fa-cogs"></i></span>Tools</a>
+  </div>
 
-  <!-- Officers / Members -->
-  <section class="py-16 px-6 bg-gray-800">
-    <h2 class="text-3xl font-bold text-center mb-8">Core Members</h2>
-    <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto text-center">
-      <div class="bg-gray-700 p-6 rounded-xl">
-        <img src="https://via.placeholder.com/120" class="mx-auto rounded-full mb-4" alt="Leader">
-        <h3 class="text-xl font-bold">Drakos</h3>
-        <p class="text-yellow-400">Guild Leader</p>
-      </div>
-      <div class="bg-gray-700 p-6 rounded-xl">
-        <img src="https://via.placeholder.com/120" class="mx-auto rounded-full mb-4" alt="Officer">
-        <h3 class="text-xl font-bold">Lyria</h3>
-        <p class="text-yellow-400">PvE Officer</p>
-      </div>
-      <div class="bg-gray-700 p-6 rounded-xl">
-        <img src="https://via.placeholder.com/120" class="mx-auto rounded-full mb-4" alt="Officer">
-        <h3 class="text-xl font-bold">Kael</h3>
-        <p class="text-yellow-400">PvP Strategist</p>
-      </div>
-    </div>
-  </section>
+  <div id="overlay" onclick="toggleSidebar()"></div>
 
-  <!-- Achievements / Gallery -->
-  <section class="py-16 px-6 bg-gray-900">
-    <h2 class="text-3xl font-bold text-center mb-8">Guild Highlights</h2>
-    <div class="grid md:grid-cols-3 gap-4 max-w-6xl mx-auto">
-      <img src="https://via.placeholder.com/400x250" class="rounded-xl shadow-lg" alt="Raid 1">
-      <img src="https://via.placeholder.com/400x250" class="rounded-xl shadow-lg" alt="Raid 2">
-      <img src="https://via.placeholder.com/400x250" class="rounded-xl shadow-lg" alt="PvP Tournament">
-    </div>
-  </section>
+  <div class="main-content">
+    <h1>Welcome to Guild Artoria</h1>
+    <p>
+      Selamat datang di markas resmi <strong>Guild Artoria</strong> — komunitas para pejuang tangguh yang siap menaklukkan dunia game bersama-sama.
+    </p>
+    <p>
+      Bergabunglah dengan kami untuk berpartisipasi dalam event-event seru, diskusi strategi, serta mempererat persahabatan sesama anggota guild.
+    </p>
+    <p>
+      Jangan lupa untuk selalu aktif di <strong>Group Chat WhatsApp</strong> dan <strong>Discord Server</strong> kami agar tidak ketinggalan informasi terbaru dan koordinasi bersama.
+    </p>
+    <p style="display: flex; gap: 15px; flex-wrap: wrap;">
+      <a href="https://chat.whatsapp.com/EYpXduoMsSYFuqhMwPAp3M" target="_blank" 
+         style="color:#d166ff; font-weight:bold; text-decoration:none; 
+                padding:8px 15px; border: 2px solid #d166ff; border-radius:5px;
+                box-shadow: 0 0 10px #d166ff; display: inline-block;">
+        Join Our WhatsApp Group Chat
+      </a>
+      <a href="https://discord.gg/SXu7sRQT" target="_blank" 
+         style="color:#7289da; font-weight:bold; text-decoration:none; 
+                padding:8px 15px; border: 2px solid #7289da; border-radius:5px;
+                box-shadow: 0 0 10px #7289da; display: inline-block;">
+        Join Our Discord Server
+      </a>
+    </p>
+  </div>
 
-  <!-- Join Us Section -->
-  <section id="join" class="py-16 px-6 bg-yellow-500 text-black text-center">
-    <h2 class="text-3xl font-bold mb-4">Want to Join NightFang?</h2>
-    <p class="mb-6">We’re always looking for active, skilled, and fun members. Discord is required. Apply now and be part of our legacy.</p>
-    <a href="https://discord.gg/yourguild" target="_blank" class="bg-black hover:bg-gray-800 text-white font-bold py-3 px-6 rounded-full">Join Discord</a>
-  </section>
-
-  <!-- Footer -->
-  <footer class="py-10 bg-gray-950 text-center text-gray-400">
-    <p>&copy; 2025 NightFang Guild. All rights reserved.</p>
-    <div class="mt-4 space-x-4">
-      <a href="#" class="hover:text-white">Facebook</a>
-      <a href="#" class="hover:text-white">YouTube</a>
-      <a href="#" class="hover:text-white">Guild Ranking</a>
-    </div>
-  </footer>
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+      sidebar.classList.toggle('show');
+      document.body.classList.toggle('sidebar-open');
+      overlay.style.display = sidebar.classList.contains('show') ? 'block' : 'none';
+    }
+  </script>
 
 </body>
 </html>

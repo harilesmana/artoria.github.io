@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guild Artoria - List Admin</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+
+ <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <div class="header">
+    <span class="open-btn" onclick="toggleSidebar()" role="button">☰</span>
+    <h2>ARTORIA</h2>
+  </div>
+
+  <div id="sidebar" class="sidebar">
+      <a href="index.html"><span class="icon"><i class="fas fa-home"></i></span>Home</a>
+    <a href="admin.html"><span class="icon"><i class="fas fa-user-shield"></i></span>Admin</a>
+    <a href="event.html"><span class="icon"><i class="fas fa-calendar-alt"></i></span>Events</a>
+    <a href="tool.html"><span class="icon"><i class="fas fa-cogs"></i></span>Tools</a>
+  </div>
+
+  <div id="overlay" onclick="toggleSidebar()"></div>
+
+  <div class="main-content">
+    <h1>List Admin Guild Artoria</h1>
+    <div class="admin-list">
+      <div class="admin-card">
+        <img src="https://i.ibb.co/JWjdGcRC/490065847-18495552118038215-2424776075891478075-n.png" alt="Nexarion" class="admin-photo" />
+        <div class="admin-name">Nexarion</div>
+        <div class="admin-role">Leader</div>
+        <div class="admin-contact">
+          <a href="https://wa.me/6285136429295">whatsapp link</a>
+        </div>
+      </div>
+      <div class="admin-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmwR5cMelsjVd-yYyUHUFgMs3u_SJBDMv2PjMjCJ3SEez1Yz7VsDJb5OQ&s=10" alt="Yohoo" class="admin-photo" />
+        <div class="admin-name">Yohoo</div>
+        <div class="admin-role">Vice</div>
+      
+      </div>
+      <div class="admin-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmwR5cMelsjVd-yYyUHUFgMs3u_SJBDMv2PjMjCJ3SEez1Yz7VsDJb5OQ&s=10" alt="Anonim" class="admin-photo" />
+        <div class="admin-name">Anonim</div>
+        <div class="admin-role">Officer</div>
+        
+      </div>
+      <div class="admin-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmwR5cMelsjVd-yYyUHUFgMs3u_SJBDMv2PjMjCJ3SEez1Yz7VsDJb5OQ&s=10" alt="Farex" class="admin-photo" />
+        <div class="admin-name">Farex</div>
+        <div class="admin-role">Officer</div>
+      
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+      sidebar.classList.toggle('show');
+      document.body.classList.toggle('sidebar-open');
+      overlay.style.display = sidebar.classList.contains('show') ? 'block' : 'none';
+    }
+  </script>
+
+</body>
+</html>
